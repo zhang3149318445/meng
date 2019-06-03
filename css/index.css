@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body,.main{
+    height:100%;
+}
+body{
+  
+}
+.main{
+    position: relative;
+    max-width:750px;
+    margin:0 auto;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+} 
+.page1{
+    position: relative;
+    background:url("../images/bg.jpg") center center no-repeat;
+    background-size:100% 100%;
+}
+.page1>img{
+    position:absolute;
+
+}
+.dushu{
+    width:3rem;
+    height:3rem;
+    top:0.2rem;
+    right:0.2rem;
+}
+.bottom{
+    width:100%;
+    height:4.02rem;
+    bottom:0;
+    left:0;
+
+}
+.rexue{
+    width:7rem;
+    height:7rem;
+    left:0rem;
+    top:4rem;
+}
+.swiper-button-next{
+    width:0.5rem;
+    height:0.4rem;
+    background:url("../images/arrow.png") center center no-repeat;
+    background-size:cover;
+    bottom: 0.5rem;
+    top: auto;
+    left: 50%;
+    right: auto;
+    margin-left: -0.25rem;
+    animation:slideInUp 1s infinite;
+}
+
+
+@-webkit-keyframes slideInUp {
+    from {
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+  }
+  
+  @-webkit-keyframes slideOutDown {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+      visibility: hidden;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  /* 第二页 */
+  .page2{
+      position: relative;
+  }
+  .page2>img{
+      position: absolute;
+  }
+  .page2{
+      height:100%;
+      background:url("../images/page2.jpeg") center center no-repeat;
+      background-size:cover;
+
+  }
+
+  .tubiao{
+      width:2.48rem;
+      height:2.48rem;
+      left:0rem;
+      top:1rem;
+
+  }
+  .youshangjiao{
+      width:6rem;
+      height:6rem;
+      right:0rem;
+      top:0rem;
+  }
+  .xin{
+      width:3rem;
+      height:2.5rem;
+      right:0rem;
+      top:4.5rem;
+  }
+
+  .tiananmen{
+     width: 2.5rem;
+     height: 3rem;
+     left: 0rem;
+     bottom: 0rem;
+  }
+  .kang{
+     width: 2rem;
+     height: 1.6rem;
+     bottom: 0.9rem;
+     left: 50%;
+     margin-left: -0.875rem;
+  }
+  .aiguo{
+     width: 1.5rem;
+     height: 1.5rem;
+     right: 0.5rem;
+     bottom: 0.7rem;
+
+  }
+  .textContent{
+      position:absolute;
+      font-size:0.45rem;
+      left:0.8rem;
+      top:3.5rem;
+      line-height:0.9rem;
+      color:red;
+  }
+  /* 相框 */
+  .photoBox{
+      width:5.44rem;
+      height:3.24rem;
+      background:url("../images/photoBorder.png") center center no-repeat;
+      background-size:100% 100%;
+      position: absolute;
+      left:50%;
+      margin-left:-2.72rem;
+      bottom:2.7rem;
+      padding:0.4rem;
+      box-sizing:border-box;
+  }
+  .shengqi{
+      display:block;
+      width:100%;
+      height:100%;
+
+  }
+/* page3 */
+   .page3{
+    height:100%;
+    background:url("../images/page2.jpeg") center center no-repeat;
+    background-size:cover;
+   }
+   .page3>img{
+       position: absolute;
+   }
+  .zhongguomeng{
+    width:5rem;
+    height:6.5rem;
+    top:0rem;
+    left:50%;
+    margin-left:-2.5rem;
+  }
+  .sanjun{
+     width:5rem;
+     height: 5rem;
+     left:5rem;
+     bottom:4rem;
+     margin-left: -50%;
+  }
+
+  .xiexie{
+    width: 4rem;
+    height: 3rem;
+    left: 2rem;
+    bottom: 1rem;
+  }
+
+  .music{
+      width:2rem;
+      height:2rem;
+      background:url("../images/bayi.png") center center no-repeat;
+      background-size:cover;
+      position: absolute;
+      left:0.2rem;
+      top:0.2rem;
+      z-index:999;
+      border-radius:50%;
+      animation: music 2s linear infinite;
+
+  }
+
+  @keyframes music{
+      100%{
+          transform: rotate(360deg)
+      }
+  }

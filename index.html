@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中国梦</title>
+    <!--1、引入重置样式表  -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 3、按照swiper的文档说引入相应的css和js -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <section class="main">
+      <section class="music">
+          <audio src="source/music.mp3" loop autoplay></audio>
+      </section>
+      <!-- 4、按照swiper插件说明粘贴内容结构 -->
+        <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide page1">
+                        <!-- page1 -->
+                        <img class="dushu ani" 
+                        swiper-animate-effect="fadeInRight " swiper-animate-duration="1s" swiper-animate-delay="0s"
+                        src="images/dushu.png" alt="">
+
+
+                        <img class="rexue ani" 
+                        swiper-animate-effect="zoomIn  " swiper-animate-duration="1s" swiper-animate-delay="1s"
+                        src="images/rexue.png" alt="">
+
+                        <img class="bottom ani" 
+                        swiper-animate-effect="fadeInUp " swiper-animate-duration="1s" swiper-animate-delay="0s"
+                        src="images/bottom.png" alt="">
+                    </div>
+                    <div class="swiper-slide page2">
+                        <!-- 第二页 -->
+                        <img class="youshangjiao ani" 
+                        swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"
+                        src="images/youshangjiao.png" alt="">
+
+                        <img class="xin ani" 
+                        swiper-animate-effect="bounceInRight " swiper-animate-duration="1s" swiper-animate-delay="2s"
+                        src="images/xin.png" alt="">
+
+                        <img class="tiananmen ani"
+                        swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s"
+                         src="images/tiananmen.png" alt="">
+
+                        <img class="kang ani" 
+                        swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s"
+                        src="images/kang.png" alt="">
+                        
+                        <img class="aiguo ani" 
+                        swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="1s"
+                        src="images/aiguo.png" alt="">
+                        <!-- 诗歌 -->
+                        <section class="textContent">
+                           <p class="ani"
+                           swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="3s"
+                           >恨不抗日死，</p>
+                           <p class="ani"
+                           swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="4s"
+                           >留作今日羞。</p>
+                           <p class="ani"
+                           swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="5s"
+                           >国破尚如此，</p>
+                           <p class="ani"
+                           swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="6s"
+                           >我何惜此头。</p>
+                        </section>
+                        <!-- 相框 -->
+                        <section class="photoBox ani"
+                        swiper-animate-effect="zoomIn " swiper-animate-duration="1s" swiper-animate-delay="7s"
+                        
+                        >
+                          <img class="shengqi ani" 
+                          swiper-animate-effect="rotateIn" swiper-animate-duration="1s" swiper-animate-delay="8s"
+                          src="images/shengqi.jpg" alt="">
+                        </section>
+
+                    </div>
+                    <div class="swiper-slide page3">
+                        <img class="zhongguomeng ani" 
+                        swiper-animate-effect="bounceInDown  " swiper-animate-duration="1s" swiper-animate-delay="1s"
+                        src="images/zhongguomeng.png" alt="">
+
+                        <img class="sanjun ani" 
+                        swiper-animate-effect="bounceInUp  " swiper-animate-duration="1s" swiper-animate-delay="1s"
+                        src="images/sanjun.png" alt="">
+                        
+                        <img class="xiexie ani"
+                        swiper-animate-effect="rotateIn  " swiper-animate-duration="1s" swiper-animate-delay="2s"
+                        src="images/xiexie.png" alt="">
+                           </section>
+                           <section class="tips">
+                           </section>
+                        </section>
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <!-- <div class="swiper-pagination"></div> -->
+                
+                <!-- 如果需要导航按钮 -->
+                <!-- <div class="swiper-button-prev"></div> -->
+                <div class="swiper-button-next"></div>
+                
+                
+                
+            </div>
+  </section>
+</body>
+</html>
+<script>
+    /* 
+      2、js动态实现响应式布局
+    
+     */
+  ~ function(){
+      function coumputed(){
+      var html=document.documentElement||document.body;
+      var screenW=html.clientWidth;
+      var desW=750;
+      if(screenW>750){
+        html.style.fontSize=100+"px";
+        
+        return;
+      }
+      html.style.fontSize=screenW/desW*100+"px";
+
+      }
+      coumputed();
+  }()
+</script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<script>
+// 5、初始化swiper
+window.onload=function(){
+    var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical', // 垂直切换选项
+    loop: true, // 循环模式选项
+    // autoplay:true,//自动播放
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on:{
+      init: function(){
+        swiperAnimateCache(this); //隐藏动画元素 
+        swiperAnimate(this); //初始化完成开始动画
+      }, 
+      slideChangeTransitionEnd: function(){ 
+        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+        //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+      } 
+    }
+    
+  })        
+  
+}
+
+</script>
